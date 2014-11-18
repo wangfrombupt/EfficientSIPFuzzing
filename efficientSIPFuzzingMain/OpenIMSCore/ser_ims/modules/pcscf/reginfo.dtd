@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT reginfo (registration*)>
+<!ATTLIST reginfo 
+	version CDATA				#IMPLIED
+	xmlns	CDATA				#IMPLIED
+	state 	(full|partial) 		#REQUIRED >
+
+<!ELEMENT registration (contact*)>
+<!ATTLIST registration
+	aor		CDATA 				#REQUIRED
+	id 		CDATA 				#REQUIRED
+	state 	(init|active|terminated) #REQUIRED >
+
+<!ELEMENT contact  (uri ,display-name*, unknown-param*) >
+<!ATTLIST contact
+	id 		CDATA 				#REQUIRED
+	state 	(init|active|terminated) #REQUIRED
+	event 	(registered|created|
+			refreshed|shortened|
+			expired|deactivated|
+			probation|unregistered|
+			rejected) #REQUIRED 
+	duration-registered	CDATA	#IMPLIED
+	expires	CDATA	#IMPLIED
+	retry-after	CDATA	#IMPLIED
+	callid	CDATA	#IMPLIED
+	cseq	CDATA	#IMPLIED
+	q	CDATA	#IMPLIED
+	>	
+
+<!ELEMENT uri (#PCDATA)>
+<!ELEMENT display-name (#PCDATA)>
+
+<!ELEMENT unknown-param (#PCDATA)>
+<!ATTLIST unknown-param
+	name	CDATA 				#REQUIRED>

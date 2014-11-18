@@ -1,0 +1,213 @@
+/**
+ * $Id: location.c 68 2006-12-10 23:10:52Z vingarzan $
+ *  
+ * Copyright (C) 2004-2006 FhG Fokus
+ *
+ * This file is part of Open IMS Core - an open source IMS CSCFs & HSS
+ * implementation
+ *
+ * Open IMS Core is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * For a license to use the Open IMS Core software under conditions
+ * other than those described here, or to purchase support for this
+ * software, please contact Fraunhofer FOKUS by e-mail at the following
+ * addresses:
+ *     info@open-ims.org
+ *
+ * Open IMS Core is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * It has to be noted that this Open Source IMS Core System is not 
+ * intended to become or act as a product in a commercial context! Its 
+ * sole purpose is to provide an IMS core reference implementation for 
+ * IMS technology testing and IMS application prototyping for research 
+ * purposes, typically performed in IMS test-beds.
+ * 
+ * Users of the Open Source IMS Core System have to be aware that IMS
+ * technology may be subject of patents and licence terms, as being 
+ * specified within the various IMS-related IETF, ITU-T, ETSI, and 3GPP
+ * standards. Thus all Open IMS Core users have to take notice of this 
+ * fact and have to agree to check out carefully before installing, 
+ * using and extending the Open Source IMS Core System, if related 
+ * patents and licences may become applicable to the intended usage 
+ * context.  
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ * 
+ */
+ 
+/**
+ * \file
+ * 
+ * Interrogating-CSCF - Location Information Operations LIR/LIA
+ * 
+ * 
+ *  \author Dragos Vingarzan vingarzan -at- fokus dot fraunhofer dot de
+ * 
+ */
+ 
+#include <values.h>
+
+#include "location.h"
+
+#include "../../mem/shm_mem.h"
+
+#include "mod.h"
+#include "db.h"
+#include "sip.h"
+#include "cx.h"
+#include "cx_avp.h"
+#include "registration.h"
+
+extern struct tm_binds tmb;            /**< Structure with pointers to tm funcs 		*/
+extern struct cdp_binds cdpb;            /**< Structure with pointers to cdp funcs 		*/
+
+/**
+ * Perform Location-Information-Request.
+ * creates and send the user location query
+ * @param msg - the SIP message
+ * @param str1 - the realm
+ * @param str2 - not used
+ * @returns true if OK, false if not
+ */
+int I_LIR(struct sip_msg* msg, char* str1, char* str2)
+{
+	int result=CSCF_RETURN_FALSE;
+	str public_identity;
+	str realm;
+	AAAMessage *lia=0;
+		
+	realm = cscf_get_realm_from_ruri(msg);
+	
+	LOG(L_DBG,"DBG:"M_NAME":I_LIR: Starting ...\n");
+	/* check if we received what we should */
+	if (msg->first_line.type!=SIP_REQUEST) {
+		LOG(L_ERR,"ERR:"M_NAME":I_LIR: The message is not a request\n");
+		goto done;
+	}
+	
+	/* extract data from message */	
+	public_identity=cscf_get_public_identity_from_requri(msg);
+	if (!public_identity.len) {
+		LOG(L_ERR,"ERR:"M_NAME":I_LIR: Public Identity not found, responding with 400\n");
+		cscf_reply_transactional(msg,400,MSG_400_NO_PUBLIC);
+		result=CSCF_RETURN_BREAK;
+		goto done;		
+	}
+	lia = Cx_LIR(msg,public_identity,realm);
+	if (!lia){
+		LOG(L_ERR,"ERR:"M_NAME":I_LIR: Error creating/sending LIR\n");
+		cscf_reply_transactional(msg,480,MSG_480_DIAMETER_ERROR);
+		result=CSCF_RETURN_BREAK;
+		goto done;		
+	}
+
+
+    result = I_LIA(msg,lia);
+	
+	if (lia) cdpb.AAAFreeMessage(&lia);	
+done:
+	if (public_identity.s) shm_free(public_identity.s);	
+	LOG(L_DBG,"DBG:"M_NAME":I_LIR: ... Done\n");
+	return result;	
+}
+
+/**
+ * Process a Location-Information-Answer.
+ * Called from the Cx_LIA handler when the LIA is received
+ * @param msg - the original SIP message retrieved from the transaction
+ * @param lia - the LIA diameter answer received from the HSS
+ * @returns #CSCF_RETURN_TRUE on success or #CSCF_RETURN_FALSE on error
+ */
+int I_LIA(struct sip_msg* msg, AAAMessage* lia)
+{
+	int rc=-1,experimental_rc=-1;
+	str server_name;
+	int *m_capab=0,m_capab_cnt=0;
+	int *o_capab=0,o_capab_cnt=0;
+	scscf_list *list=0;
+	str call_id;	
+	
+	if (!lia){
+		//TODO - add the warning code 99 in the reply	
+		cscf_reply_transactional(msg,480,MSG_480_DIAMETER_TIMEOUT_LIA);		
+		return CSCF_RETURN_BREAK;
+	}
+	
+	if (!Cx_get_result_code(lia,&rc)&&
+		!Cx_get_experimental_result_code(lia,&experimental_rc))
+	{
+		cscf_reply_transactional(msg,480,MSG_480_DIAMETER_MISSING_AVP_LIA);		
+		return CSCF_RETURN_BREAK;			
+	}
+	
+	switch(rc){
+		case -1:
+			switch(experimental_rc){
+				
+				case RC_IMS_DIAMETER_ERROR_USER_UNKNOWN:
+					cscf_reply_transactional(msg,604,MSG_604_USER_UNKNOWN);
+					return CSCF_RETURN_BREAK;
+
+				case RC_IMS_DIAMETER_ERROR_IDENTITY_NOT_REGISTERED:
+					cscf_reply_transactional(msg,404,MSG_404_NOT_REGISTERED);
+					return CSCF_RETURN_BREAK;
+					
+				case RC_IMS_DIAMETER_UNREGISTERED_SERVICE:
+					goto success;	
+				
+				default:
+					cscf_reply_transactional(msg,403,MSG_403_UNKOWN_EXPERIMENTAL_RC);		
+					return CSCF_RETURN_BREAK;
+			}
+			break;
+		
+		case AAA_UNABLE_TO_COMPLY:
+			cscf_reply_transactional(msg,403,MSG_403_UNABLE_TO_COMPLY);		
+			return CSCF_RETURN_BREAK;
+			break;
+				
+		case AAA_SUCCESS:
+			goto success;			
+			break;
+						
+		default:
+			cscf_reply_transactional(msg,403,MSG_403_UNKOWN_RC);		
+			return CSCF_RETURN_BREAK;
+	}
+	
+success:
+	server_name = Cx_get_server_name(lia);
+	if (server_name.len){
+		list = shm_malloc(sizeof(scscf_list));
+		list->scscf_name=server_name;
+		list->score=MAXINT;
+		list->next=0;
+	}else{
+		Cx_get_capabilities(lia,&m_capab,&m_capab_cnt,&o_capab,&o_capab_cnt);
+		list = I_get_capab_ordered(server_name,m_capab,m_capab_cnt,o_capab,o_capab_cnt);
+		if (m_capab) shm_free(m_capab);
+		if (o_capab) shm_free(o_capab);
+	}
+
+	if (!list) {
+		cscf_reply_transactional(msg,600,MSG_600_EMPTY_LIST);	
+		return CSCF_RETURN_BREAK;
+	}
+	call_id = cscf_get_call_id(msg,0);
+	if (!call_id.len||!add_s_list(call_id,list)){
+		cscf_reply_transactional(msg,500,MSG_500_ERROR_SAVING_LIST);	
+		return CSCF_RETURN_BREAK;
+	}
+	//print_s_list(L_ERR);	
+		
+	return CSCF_RETURN_TRUE;
+}
+

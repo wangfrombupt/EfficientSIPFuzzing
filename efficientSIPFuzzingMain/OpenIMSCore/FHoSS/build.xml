@@ -1,0 +1,189 @@
+<project name="FHoSS Project" default="compile" basedir=".">
+	<property file="build.properties"/>	
+	
+	<description>
+		FHoSS Project - Build file for Compilation and Deployment of the FHoSS
+	</description>	
+	
+	<!--  directories -->
+	<property name="path.src" location="src" />
+	<property name="path.srcweb" location="src-web" />
+	<property name="path.build" location="bin" />
+	<property name="path.doc" location="docs" />
+	<property name="path.webdest" location="${path.deploy}/webapps/hss.web.console" />	
+	<property name="path.log" location="${path.deploy}/logs" />	
+	<property name="path.config" location="${path.deploy}" />
+	<property name="path.script" location="${path.deploy}" />
+	<property name="path.example" location="${path.deploy}/examples" />
+	
+	<!-- compilation control functions -->
+	<property name="compile.debug" value="true" />
+	<property name="compile.deprecation" value="true" />
+	<property name="compile.optimize" value="true" />
+	
+	<!-- classpath and libraries used by project -->
+	<path id="compile.classpath">
+		<pathelement location="." />
+		<pathelement location="${path.build}" />
+		<pathelement location="lib" />
+		<fileset dir="lib">
+			<include name="*.jar" />
+		</fileset>
+	</path>	
+	
+	<target name="init">
+		<tstamp/>
+		<mkdir dir="${path.build}" />
+	</target>
+
+	
+	
+	<target name="compile" depends="init">
+		<javac 
+			srcdir="${path.src}" 
+			destdir="${path.build}"
+			debug="${compile.debug}"
+			deprecation="${compile.deprecation}"
+			optimize="${compile.optimize}"
+			compiler="javac1.5">
+			
+			<classpath refid="compile.classpath" />			
+		</javac>	
+		
+	</target>	
+
+		
+	<target name="jars" depends="compile">
+		<mkdir dir="${path.build}/lib" />
+		<jar destfile="${path.build}/lib/FHoSS.jar">		
+			<fileset dir="${path.build}">
+				<include name="**"/>				
+				<exclude name="lib/**"/>				
+			</fileset>
+
+			<fileset dir="${path.src}">
+				<include name="mappings/**"/>				
+				<include name="hibernate.cfg.xml"/>				
+				<include name="mapping.xml"/>				
+				<include name="MessageResources.properties"/>								
+				<include name="castor.properties"/>								
+			</fileset>
+			
+		</jar>	
+	</target>
+	
+	<target name="config" depends="jars" >
+		<mkdir dir="${path.config}" />
+		<copy todir="${path.config}">
+			<fileset dir="config">
+				<include name="*"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="script" depends="jars" >
+		<mkdir dir="${path.script}" />
+		<copy todir="${path.script}">
+			<fileset dir="scripts" >
+				<include name="startup.sh" />
+				<include name="shutdown.sh" />
+			</fileset>			
+		</copy>
+		
+		<chmod dir="${path.script}" perm="+x" includes="*.sh"/>
+	</target>
+	
+	<target name="deploy" depends="jars,config,script">
+		<mkdir dir="${path.deploy}" />
+		<copy todir="${path.deploy}">
+			<fileset dir="tomcat">
+				<include name="**/conf/*.*"/>
+				<include name="**/lib/*.jar"/>
+				<include name="**/webapps/**"/>				
+			</fileset>
+		</copy>
+		
+		<echo message="Install the hss.web.console"/>		
+		<mkdir dir="${path.log}"/>
+		<mkdir dir="${path.webdest}"/>
+		<copy todir="${path.webdest}">
+			<fileset dir="${path.srcweb}">
+				<include name="**/*"/>
+			</fileset>
+		</copy>
+		
+		<mkdir dir="${path.webdest}/classes"/>
+		<copy todir="${path.webdest}/WEB-INF/classes">
+			<fileset dir="${path.build}">
+				<include name="**/hss/**/*"/>
+				<exclude name="lib/**"/>
+			</fileset>
+		</copy>
+				
+		<copy todir="${path.deploy}/lib" file="${path.build}/lib/FHoSS.jar" />
+<!--		<copy todir="${path.deploy}/lib" file="config/log4j.properties" /> -->
+
+		<copy todir="${path.deploy}/lib">
+			<fileset dir="lib">
+				<include name="*.jar"/>
+			</fileset>
+		</copy>
+
+	</target>
+
+	<target name="jdoc" depends="compile">
+		<mkdir dir="${path.doc}" />
+		<mkdir dir="${path.doc}/api" />
+	  	<javadoc 
+	  		sourcepath="${path.src}"
+	  		destdir="${path.doc}/api">
+	  		
+	  		<!-- packagenames="*" -->
+	  		
+	  	    <packageset dir="${path.src}" defaultexcludes="yes">
+	  	      <include name="de/**"/>
+	  	      
+	  	    </packageset>	  		
+	  	
+	  		<classpath refid="compile.classpath" />
+	  	</javadoc>	
+	</target>
+	
+	<target name="example" depends="deploy" >
+		<mkdir dir="${path.example}" />
+		<copy todir="${path.example}" >
+			<fileset dir="./scripts" >
+				<include name="*.sql" />
+				<include name="*.sh" />
+			</fileset>
+		</copy>
+		<chmod dir="${path.example}" perm="+x" includes="*.sh"/>
+	</target>
+
+	<target name="clean">
+		<delete dir="${path.build}" />
+	  	<delete dir="${path.doc}" />
+	</target>
+	
+
+	<target name="cleanall" >
+		<delete dir="${path.example}" />
+	  	<delete dir="${path.doc}" />
+		<delete dir="${path.deploy}" />
+		<delete dir="${path.build}" />
+	</target>
+	
+	<target name="deb">
+		<exec executable="make">
+			<arg value="-f" />
+			<arg value="debian/rules" />
+			<arg value="binary" />
+		</exec>
+		<exec executable="make">
+			<arg value="-f" />
+			<arg value="debian/rules" />
+			<arg value="clean" />
+		</exec>
+	</target>
+</project>
+

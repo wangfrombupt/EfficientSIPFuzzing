@@ -1,0 +1,607 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.1.0" />
+<style type="text/css">
+/* Debug borders */
+p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
+/*
+  border: 1px solid red;
+*/
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+tt {
+  color: navy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  font-family: sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  border-bottom: 2px solid silver;
+  padding-top: 0.5em;
+}
+
+div.sectionbody {
+  font-family: serif;
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+span#author {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+span#email {
+}
+span#revision {
+  font-family: sans-serif;
+}
+
+div#footer {
+  font-family: sans-serif;
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+div#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+div#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+div#preamble,
+div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-right: 10%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+
+div.listingblock {
+  margin-right: 0%;
+}
+div.listingblock > div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock > div.content {
+  padding-left: 2.0em;
+}
+
+div.attribution {
+  text-align: right;
+}
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 2px solid silver;
+}
+
+div.exampleblock > div.content {
+  border-left: 2px solid silver;
+  padding: 0.5em;
+}
+
+div.verseblock div.content {
+  white-space: pre;
+}
+
+div.imageblock div.content { padding-left: 0; }
+div.imageblock img { border: 1px solid silver; }
+span.image img { border-style: none; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: italic;
+}
+dd > *:first-child {
+  margin-top: 0;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.olist2 {
+  list-style-type: lower-alpha;
+}
+
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+tfoot {
+  font-weight: bold;
+}
+
+div.hlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+td.hlist1 {
+  vertical-align: top;
+  font-style: italic;
+  padding-right: 0.8em;
+}
+td.hlist2 {
+  vertical-align: top;
+}
+
+@media print {
+  div#footer-badges { display: none; }
+}
+
+div#toctitle {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel1, div.toclevel2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+}
+/* Workarounds for IE6's broken and incomplete CSS2. */
+
+div.sidebar-content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+div.sidebar-title, div.image-title {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 0.0em;
+  margin-bottom: 0.5em;
+}
+
+div.listingblock div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock-content {
+  padding-left: 2.0em;
+}
+
+div.exampleblock-content {
+  border-left: 2px solid silver;
+  padding-left: 0.5em;
+}
+
+/* IE6 sets dynamically generated links as visited. */
+div#toc a:visited { color: blue; }
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+window.onload = generateToc
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, October 2006. License: GPL */
+
+function getText(el) {
+  var text = "";
+  for (var i = el.firstChild; i != null; i = i.nextSibling) {
+    if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+      text += i.data;
+    else if (i.firstChild != null)
+      text += getText(i);
+  }
+  return text;
+}
+
+function TocEntry(el, text, toclevel) {
+  this.element = el;
+  this.text = text;
+  this.toclevel = toclevel;
+}
+
+function tocEntries(el) {
+  var result = new Array;
+  var re = /[hH]([2-3])/;
+  // Function that scans the DOM tree for header elements (the DOM2
+  // nodeIterator API would be a better technique but not supported by all
+  // browsers).
+  var iterate = function (el) {
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+        var mo = re.exec(i.tagName)
+        if (mo)
+          result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+        iterate(i);
+      }
+    }
+  }
+  iterate(el);
+  return result;
+}
+
+function generateToc() {
+  var toc = document.getElementById("toc");
+  var entries = tocEntries(document.getElementsByTagName("body")[0]);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "toc" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+}
+/*]]>*/
+</script>
+<title>Adaptive/Generic Ratelimit</title>
+</head>
+<body>
+<div id="header">
+<h1>Adaptive/Generic Ratelimit</h1>
+<span id="author">Bogdan Harjoc</span><br />
+<span id="email"><tt>&lt;<a href="mailto:harjoc@fokus.fraunhofer.de">harjoc@fokus.fraunhofer.de</a>&gt;</tt></span><br />
+<div id="toc">
+  <div id="toctitle">Table of Contents</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<h2>1. Introduction</h2>
+<div class="sectionbody">
+<p>Two main changes went into the ratelimit module:</p>
+<ul>
+<li>
+<p>
+generic parameters
+</p>
+</li>
+<li>
+<p>
+adaptive droprate, based on external factor (currently cpu load)
+</p>
+</li>
+</ul>
+<p>The patched module is available in the <em>03_ratelimit</em> branch of the <em>ser_ims</em> repository, at
+OpenIMSCore: <a href="http://www.openimscore.org/sources/index.html">OpenIMSCore SVN Area</a></p>
+<p><a href="http://svn.berlios.de/viewcvs/openimscore/ser_ims/branches/03_ratelimit/modules/ratelimit/">The modified module</a></p>
+</div>
+<h2>2. Generic Parameters</h2>
+<div class="sectionbody">
+<p>There is support for adding any SIP method as opposed to the request rate limits for
+<em>REGISTER</em>, <em>INVITE</em>, <em>SUBSCRIBE</em> which were originally supported.</p>
+<p>The modified modparam format is:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>modparam("ratelimit", "pipe", "pipe_no:algorithm:limit")
+modparam("ratelimit", "queue", "pipe_no:method")</tt></pre>
+</div></div>
+<p>The pipe/queue policy has been lifted from BSD's
+<a href="http://www.hmug.org/man/8/ipfw.php">ipfw manual</a>, with some simplifications. In
+principle, each specified method is associated with its own queue and a number of
+queues are connected to a certain pipe.</p>
+<h3>2.1. Queues</h3>
+<p>The queue modparam format does not include a queue id because queues are appended to
+the queue list in the order in which they appear in the .cfg file. Pipes do require
+an id simply for clarity (because you have to assign queues to them).</p>
+<p>The queue model in <em>ipfw</em> contains a number of other parameters which for now have
+not been considered (notably <em>weight</em>).</p>
+<p>To specify a queue that accepts all methods, use <em>*</em> instead of <em>METHOD</em>. As queues
+are matched against request methods, you will usually want to have this as the last
+queue added or other queues with specific methods will never match. At this time,
+glob or regexp patterns are not supported.</p>
+<h3>2.2. Pipes</h3>
+<p>A pipe is characterised by its algorithm and limit (bandwidth, in <em>ipfw</em> terms). When
+specifying a limit, the unit depends on the algorithm used and doesn't need to be
+spedified also (eg, for <em>TAILDROP</em>, limit means packets/sec, whereas with the <em>FEEDBACK</em>
+algorithm, it means [CPU] load factor).</p>
+<p>As mentioned above, each pipe gets its own algorithm. At this point the available
+algorithms are: <em>NOP</em> (nothing is dropped), <em>TAILDROP</em>, <em>RED</em> and <em>FEEDBACK</em>.
+Additional algorithms can be implemented as needed.</p>
+<h3>2.3. Pipe algorithms</h3>
+<p>When calling the <em>rl_check()</em> function (it doesn't take any parameters), the queue
+associated with the method is looked up and the request is pushed onto the pipe to
+which the queue is connected. At this point, the <em>rl_check()</em> result will be <em>drop</em> or
+<em>allow</em> depending on the output of the pipe's algorithm.</p>
+<p>For example, using <em>TAILDROP</em> you can specify that <em>MESSAGE</em> and <em>INVITE</em> should have a
+combined limit of 200 requests per second, while <em>REGISTER</em> and <em>SUBSCRIBE</em> should be
+accepted as long as a 0.80 load average is maintained (using the <em>FEEDBACK</em> algorithm).</p>
+<p>Using <em>FEEDBACK</em> for two different pipes is possible as long as the same desired
+load factor is specified (it doesn't make enough sense to have _INVITE_S be allowed
+till loadavg reaches 0.80 and _REGISTER_S till 0.50; or does it ?).</p>
+<p>Parameters can be changed after startup, currently only via the xmlrpc interface: you
+have to load the xmlrpc module and use the pidctl.py script (or some different xmlrpc
+client) mentioned below.</p>
+<h3>2.4. Cfg example</h3>
+<p>This is the .cfg file that is being used to test the updated ratelimit module:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>loadmodule "../ser_ims/modules/sl/sl.so"
+loadmodule "../ser_ims/modules/xmlrpc/xmlrpc.so"
+loadmodule "../ser_ims/modules/ratelimit/ratelimit.so"
+loadmodule "../ser_ims/modules/fifo/fifo.so"
+
+modparam("ratelimit", "pipe", "0:TAILDROP:200")
+modparam("ratelimit", "pipe", "1:RED:100")
+modparam("ratelimit", "pipe", "2:TAILDROP:50")
+modparam("ratelimit", "pipe", "3:FEEDBACK:80")
+
+modparam("ratelimit", "queue", "0:REGISTER")
+modparam("ratelimit", "queue", "0:MESSAGE")
+modparam("ratelimit", "queue", "3:INVITE")
+modparam("ratelimit", "queue", "2:*")
+
+modparam("ratelimit", "timer_interval", 1)
+modparam("ratelimit", "load_source", "external")
+
+modparam("fifo", "fifo_file", "/tmp/ser_fifo")
+modparam("fifo", "fifo_dir", "/tmp/")
+
+
+route {
+        <strong>if</strong> (method == "POST") {
+                dispatch_rpc();
+                <strong>break</strong>;
+        }
+
+        <strong>if</strong> (! rl_check()) {
+                rl_drop(50, 300);
+                <strong>break</strong>;
+        }
+<i>#       act_busy();</i>
+        sl_send_reply("200", "OK");
+}</tt></pre>
+</div></div>
+</div>
+<h2>3. Adaptive drop rates</h2>
+<div class="sectionbody">
+<p>When running ser on different machines, one has to adjust the drop rates for the
+static algorithms to maintain a sub-100% load average or packets start getting
+dropped in the network stack. While this is not in itself difficult, it isn't
+neither accurate nor trivial: another server taking a notable fraction of the cpu
+time will require re-tuning the parameters.</p>
+<p>While tuning the drop rates from the outside based on a certain factor is possible,
+having the algorithm run inside ratelimit permits tuning the rates based on internal
+server parameters and is somewhat more flexible (or it will be when support for
+external load factors &#8212; as opposed to cpu load &#8212; is added).</p>
+<p>This is what the <em>FEEDBACK</em> algorithm was added for.</p>
+<h3>3.1. The <em>FEEDBACK</em> algorithm</h3>
+<p>Using the PID Controller model
+(see <a href="http://en.wikipedia.org/wiki/PID_controller">Wikipedia page</a>), the
+drop rate is adjusted dynamically based on the load factor so as the load factor
+always drifts towards the specified limit (or setpoint, in PID terms).</p>
+<p>As reading the cpu load average is relatively expensive (opening <em>/proc/stat</em>,
+parsing it, etc), this only happens once every <em>timer_interval</em> seconds and
+consequently the <em>FEEDBACK</em> value is only at these intervals recomputed. This in turn
+makes it difficult for the drop rate to adjust quickly. See attached charts. Worst
+case scenarios are request rates going up/down instantly by thousands &#8212; it takes up
+to 20 seconds for the controller to adapt to the new request rate.</p>
+<p>Generally though, as real life request rates drift by less, adapting should happen
+much faster.</p>
+<p>Generated (and <em>unadjunsted</em> :-D) charts for a few scenarios follow:</p>
+<p><span class="image">
+<img src="300_10-80.png" alt="constant request rate" title="constant request rate" />
+</span>
+<span class="image">
+<img src="300_80-10.png" alt="constant request rate" title="constant request rate" />
+</span>
+<span class="image">
+<img src="80_0-300.png" alt="constant cpu setpoint" title="constant cpu setpoint" />
+</span>
+<span class="image">
+<img src="80_300-1700.png" alt="constant cpu setpoint" title="constant cpu setpoint" />
+</span></p>
+</div>
+<h2>4. Utilities</h2>
+<div class="sectionbody">
+<p>While testing the ratelimit changes these two tools were useful:</p>
+<ul>
+<li>
+<p>
+<a href="#X1">ctest</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#X2">pidctl</a>
+</p>
+</li>
+</ul>
+<h3><a id="X1"></a>4.1. ctest</h3>
+<p>This generates harcoded SIP/UDP requests with a specified rate, reads the replies
+and displays a realtime report on number of unreplied requests, number or
+<em>Retry-After:</em> responses and so on. Changing the request rate is possible while
+running.</p>
+<p>Snapshot available at: <a href="http://patraulea.com/ratelimit/ctest-20070328.tgz">http://patraulea.com/ratelimit/ctest-20070328.tgz</a></p>
+<p>Repository at <a href="http://pike.fokus.fraunhofer.de/hg">http://pike.fokus.fraunhofer.de/hg</a> (dev)</p>
+<h3><a id="X2"></a>4.2. pidctl</h3>
+<p>This is a python script that speaks <em>xmlrpc</em> and is useful when changing pipe and
+queue params or pid params. It has a somewhat limited ui. It depends on a http
+client lib also written in python, available from the download page below.</p>
+<p>Snapshot available at <a href="http://patraulea.com/ratelimit/pidctl-20070328.tgz">http://patraulea.com/ratelimit/pidctl-20070328.tgz</a></p>
+<p>Repository at <a href="http://pike.fokus.fraunhofer.de/hg">http://pike.fokus.fraunhofer.de/hg</a> (dev)</p>
+</div>
+<h2><a id="L"></a>5. Limitations</h2>
+<div class="sectionbody">
+<ul>
+<li>
+<p>
+The pipes and queues are stored as static vectors, so no more than
+<em>MAX_PIPES</em> / <em>MAX_QUEUES</em> can be added without recompiles.
+</p>
+</li>
+<li>
+<p>
+External load factor support for the <em>FEEDBACK</em> algorithm is not implemented
+</p>
+</li>
+<li>
+<p>
+As mentioned, different load factors can't be specified for one single pipe
+</p>
+</li>
+</ul>
+</div>
+<h2>6. Compatibility issues</h2>
+<div class="sectionbody">
+<ul>
+<li>
+<p>
+specifying parameters the old way is not supported any more
+</p>
+</li>
+</ul>
+</div>
+<h2>7. TODO</h2>
+<div class="sectionbody">
+<p>There is a TODO list in the patch for ser_ims/modules/ratelimit/ratelimit.c that is
+more up to date. In principle:</p>
+<ul>
+<li>
+<p>
+the <a href="#L">Limitations</a> section should be empty
+</p>
+</li>
+<li>
+<p>
+<em>DONE</em> locking has to be added (although the current lack of locks shouldn't
+                  result in crashes)
+</p>
+</li>
+<li>
+<p>
+<em>DONE</em> FIFO interface
+</p>
+</li>
+</ul>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 04-Apr-2007 13:33:16 CEST
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+REGISTER sip:[Server_Uri] SIP/2.0
+Call-ID: [Call_Id]@[IP]
+CSeq: [CSeq] REGISTER
+From: "linfeng" <sip:[From_User]@[Server_Uri]>;[2Mw5_arDQ6oVyx72_sr65Y4]Rz-`B8iW+z1-/'{9vW/hRp%.8kX8/SCYU\w+Jg8YtT`Cw}!i3VxNjP0[o/J6['5EarW2zD64K!oe?g-Z?p0{?Wm4s\'FG-EV]T3I+(wItiUe_NJa`gux%wR_v!>s9q0%a+f9YIJgCDs_2`Ow~tA({s%e]a64puci2nz4{W_)OB'q>sozL\BPpHSz+{L~Q(6X}kwU?\%bD2:Hkf1\D?.sBm}AOuFlx.'0lS{\AWW>Ij)'aZns<ERAgj+`(NwHhw4)>YsS9%ixL8p\~[LrsNWcaMP>*huCUljoFM+F8rDAZe-hv}viKFBpZxL"L2g9{RxcDe:oJMq7'Je9C~1V+i\:N`{CFYG1l<frc%)eVdJS"99S>Vr)B.ZBx/`+{2g9Vb}_q8me"-dfxSG[-QgcA1z[3!c?5BjlKsl-ZtsE+ji3qcGXOS<)hv/2a>B[%v4NR_1/kk"vv:<eC!O7xIw.i_S4\QNh%yf2n2'cZzI0+(aTPSja8xf)cLoysxb8ZR!Zx"Fn5nd"RGLc%7rXG\Pbal`y/b)yPV8`{yZ*jysrjS.bg[!N4h/-%Eo.m6'%ru[Jz91'O]x7C/alKExI6SaaM4(8OM}%I3?r4u{1!6Jr2gGf_A)1`\E-xm`a3:rOu?%DNi-Y9I-zo(rOE+khzaqW?wMQzL_{pY]Te?QdnQ39LY`_['h-X01Cg"mp\Ukg(p<n+mJbug8W*VT9*L_q2[/*3`8N(GM9Foh0YE5b{p/X/K(Gqfbkof?h3ZK<RdVbQUICrA5d~P8"zjPtA`d+?o*L<m836M1aM/]GloNXr.XETnF_u?cz'dW[YJe(Py..?6zC5DK5p}u.`PNkWTQe~rEa_v_zue?5c84?8>J]Kam*7/ng7j{K{p91*2Y}Ri:3N.-q1"11V~btS3i?1:'}RIvP?e%TJa6whufVUZ>HZ*oRQLJ"9TT.CZm~*2q~CjD-3g4Z31y[v*SN2HXO`:9<KsOG_7O\Cgvq'u>.'bpfDrptPtD1FCqD8\.!1k0CzswktJQN3H7C<:]O<80dgyT.[[G].URaZiB-7/oZg8r-wDU2!k}Ok?4UJ"dW%TeGSh!Hk1iGSH/JffW_{H4Ld!}BT5rskrtUJqa:r`nHxu'z6pF]EP{fL<"WMOrYP+xz(-B`fo`Hrk>mr"v%?dy0oC8sTB\Yd{%*.*'Dnj2\p[?I<8NKG5s)PRav0CR0LJXn\05'H1a]?s%oc>HOVhzuj2:sSlA]wyWc~HgtLm*!ut4K_P!['el/g~OGw-aA_'M%(\Z7p[K1mcHMD"Z:pMR-6AUGo?
+To: "linfeng" <sip:[From_User]@[Server_Uri]>
+Via: SIP/2.0/UDP [IP]:[PORT];branch=[Branch]
+Max-Forwards: 20
+Expires: 10800
+Authorization: Digest username="[From_User]@[Server_Uri]",realm="[Server_Uri]",nonce="",response="",uri="sip:[Server_Uri]"
+Supported: path
+Contact: <sip:[IP]:[PORT]>
+P-Preferred-Identity: "linfeng" <sip:[From_User]@[Server_Uri]>
+P-Access-Network-Info: 3GPP-UTRAN-TDD; utran-cell-id-3gpp=00000000
+Privacy: none
+User-Agent: Fraunhofer FOKUS/NGNI Java IMS UserEndpoint FoJIE 0.1 (jdk1.3)
+Allow: INVITE,ACK,CANCEL,BYE,MESSAGE,NOTIFY
+Content-Length: 0

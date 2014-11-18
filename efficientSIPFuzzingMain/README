@@ -1,0 +1,4 @@
+1，main_v1.rb为主程序
+2，format_sips/1为初代报文
+3，format_sips/2_1为进化代1报文，即最终使用的畸形报文，共105个
+4，format_sips/3为进化代2报文

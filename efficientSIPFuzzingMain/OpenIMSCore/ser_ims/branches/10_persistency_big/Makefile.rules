@@ -1,0 +1,97 @@
+#
+# $Id: Makefile.rules 2 2006-11-14 22:37:20Z vingarzan $
+#
+#
+# common Makefile rules, included by main Makefile & the  modules
+#
+
+#
+# Uses: NAME, ALLDEP, CC, CFLAGS, DEFS, INCLUDES, LIBS, MKDEP, auto_gen, auto_gen_others,
+# depends, objs, extra_objs, static_modules, static_modules_path
+# (all this must  be defined previously!,  see Makefile.defs & Makefile)
+#
+
+
+
+#implicit rules
+%.o:%.c  $(ALLDEP)
+	$(CC) $(CFLAGS) $(INCLUDES) $(DEFS) -c $< -o $@
+
+%.d: %.c $(ALLDEP)
+	@set -e; $(MKDEP) $(INCLUDES) $(DEFS) $< \
+	|  sed 's#\(\($*D)\)\?$(*F)\)\.o[ :]*#$*.o $@ : #g' > $@; \
+	[ -s $@ ] || rm -f $@
+
+
+# normal rules
+$(NAME): $(objs) $(ALLDEP)
+	$(LD) $(LDFLAGS) $(objs) $(extra_objs) $(LIBS) -o $(NAME) 
+
+
+.PHONY: all
+all: $(NAME) modules
+
+.PHONY: dep
+dep: $(depends)
+
+.PHONY: static
+static: $(objs)
+
+.PHONY: clean
+clean: 
+	-@rm -f $(objs) $(NAME) $(objs:.o=.il) 2>/dev/null
+	-@for r in $(modules) $(static_modules_path) "" ; do \
+		if [ -d "$$r" ]; then \
+			echo "module $$r" ; \
+			$(MAKE) -C $$r clean ; \
+		        $(MAKE) -C $$r/doc clean ; \
+		fi ; \
+	done 
+	@if [ -n "$(modules)" ]; then \
+		for r in $(utils_compile) "" ; do \
+			if [ -d "$$r" ]; then \
+				 $(MAKE) -C $$r clean ; \
+			fi ; \
+		done \
+	fi
+
+.PHONY: proper
+.PHONY: distclean
+.PHONY: realclean
+proper realclean distclean: clean 
+	-@rm -f $(depends) $(auto_gen) $(auto_gen_others) 2>/dev/null
+	-@for r in $(modules) "" ; do \
+		if [ -d "$$r" ]; then \
+			 $(MAKE) -C $$r proper ; \
+		        $(MAKE) -C $$r/doc proper ; \
+		fi ; \
+	done 
+	@if [ -n "$(modules)" ]; then \
+		for r in $(utils_compile) "" ; do \
+			if [ -d "$$r" ]; then \
+				 $(MAKE) -C $$r proper ; \
+			fi ; \
+		done \
+	fi
+
+.PHONY: mantainer-cleaan
+mantainer-clean: distclean
+	-rm -f TAGS tags *.dbg .*.swp
+	-@for r in $(modules) "" ; do \
+		if [ -d "$$r" ]; then \
+			$(MAKE) -C $$r mantainer-clean; \
+		fi ; \
+	 done 
+
+
+.PHONY: TAGS
+TAGS:
+	$(MKTAGS) 
+	
+ifeq (,$(MAKECMDGOALS))
+-include $(depends)
+endif
+ifneq (,$(filter-out clean proper distclean realclean mantainer-clean TAGS \
+		tar modules, $(MAKECMDGOALS)))
+-include $(depends)
+endif

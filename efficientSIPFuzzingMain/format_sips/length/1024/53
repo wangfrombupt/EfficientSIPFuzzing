@@ -1,0 +1,18 @@
+REGISTER sip:[Server_Uri] SIP/2.0
+Call-ID: [Call_Id]@[IP]
+CSeq: [CSeq] REGISTER
+From: "linfeng" <sip:[From_User]@[Server_Uri]>;tag=[Tag]
+To: "linfeng" <sip:[From_User]@[Server_Uri]>
+Via: SIP/2.0/UDP [IP]:[PORT];branch=[Branch]
+Max-Forwards: 20
+Expires: 10800
+Authorization: Digest username="[From_User]@[Server_Uri]",realm="[Server_Uri]",nonce="",response="",uri="sip:[Server_Uri]"
+Supported: path
+Contact: %*.*s%n%.555d%n%n%*s%x%.*s%n%*s%*s%*.*s%*.*s%*.*s%ns%%.*s%n%s%*.*s%s%s%.*s%x%*s%*d%*d%*d%ns%%*s%.*s%x%*d%n%x%.*s%n%x%s%*.*s%*.*s%x%*d%.127d%x%.555d%*.*ss%%x%s%.*ss%%n%.127d%.*s%n%.*s%.555d%.555d%.127d%x%n%*d%x%*d%n%x%.127d%s%n%n%*s%*.*s%.127d%*s%n%*.*s%.555d%.127d%x%*.*s%.555d%.555d%s%*d%.*s%.127d%x%ns%s%%s%*s%.127d%.127d%*d%*.*s%x%*.*s%n%.127d%.127d%*.*s%n%.*s%x%x%.127d%*.*s%n%x%*d%n%s%.555d%x%*.*s%x%.555d%.*s%*s%s%x%n%*s%x%*s%.555d%n%*ss%%.555d%*.*s%xs%%x%x%s%*.*s%*d%n%.*s%.127d%n%.555d%.*s%x%.127ds%%.*s%.*s%*s%x%*.*s%*d%n%.127d%n%.*s%ss%%*.*s%s%*s%.127d%x%xs%%*s%n%*.*s%x%n%x%s%n%*.*s%n%n%*d%*d%.555ds%%.555d%*s%.127d%*.*s%*.*s%*s%n%s%x%.127ds%%x%n%*d%*.*s%n%x%.127d%n%s%.*s%.*s%n%x%.*s%x%*.*s%*.*s%.555ds%%*d%.*s%x%.*s%.555d%n%x%*.*ss%%*ss%%n%x%s%n%x%*d%*d%.*s%ns%%x%*.*s%.127d%x%.*s%.*ss%s%%*s%.555d%n%.*s%.*s%x%*s%*.*s%n%.*s%n%*s%x%.127d%x%.555d%.555d%*s%x%s%*s%x%n%x%xs%%.127ds%%n%x%s%.555d%n%*ds%%*s%.*s%s%*.*s%*ss%%.127d%x%.555d%n%n%.*s%.*s%.555d%.*s%*s%s%*s%s%*s%.555d%*.*s%.555d%x%s%*d%n%*.*s%n%*d%*.*s%x%*d<sip:[IP]:[PORT]>
+P-Preferred-Identity: "linfeng" <sip:[From_User]@[Server_Uri]>
+P-Access-Network-Info: 3GPP-UTRAN-TDD; utran-cell-id-3gpp=00000000
+Privacy: none
+User-Agent: Fraunhofer FOKUS/NGNI Java IMS UserEndpoint FoJIE 0.1 (jdk1.3)
+Allow: INVITE,ACK,CANCEL,BYE,MESSAGE,NOTIFY
+Content-Length: 0
+

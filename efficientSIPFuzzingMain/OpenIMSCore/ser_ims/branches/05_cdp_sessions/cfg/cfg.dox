@@ -1,0 +1,185 @@
+/**
+ * $Id: cfg.dox 178 2007-03-08 13:27:35Z vingarzan $
+ */
+ 
+/**
+ * \file
+ * This file is just a place-holder for the documentation of the cfg directory.
+ * 
+ * The documentation for this directory can be found here: \ref cfg
+ *
+ * The main-page of the documentation can be found here: \ref main
+ * 
+ */
+ 
+ /**
+ * \dir cfg
+ *
+ * This is the configuration & examples directory. You are probably interested in one of the following:
+ * 
+ */
+ 
+ 
+
+ /**
+  * \file pcscf.sh
+  *
+  *	Proxy-CSCF startup script
+  *
+  *  \author Dragos Vingarzan vingarzan -at- fokus dot fraunhofer dot de
+  * 
+  */
+ /**
+  * \file pcscf.cfg
+  *
+  *	Proxy-CSCF Sample configuration file
+  *
+  *  \author Dragos Vingarzan vingarzan -at- fokus dot fraunhofer dot de
+  * 
+  */  
+  
+ 
+ 
+ 
+ /* I-CSCF */ 
+  
+ /**
+  * \file icscf.sh
+  *
+  *	Interrogating-CSCF startup script
+  *
+  *  \author Dragos Vingarzan vingarzan -at- fokus dot fraunhofer dot de
+  * 
+  */   
+ 
+ /**
+  * \file icscf.cfg
+  *
+  *	Interrogating-CSCF Sample configuration file
+  *
+  *  \author Dragos Vingarzan vingarzan -at- fokus dot fraunhofer dot de
+  * 
+  */  
+
+ /**
+  * \file icscf.xml
+  *
+  *	Interrogating-CSCF Sample configuration file for the CDiameterPeer
+  *
+  *  \author Dragos Vingarzan vingarzan -at- fokus dot fraunhofer dot de
+  * 
+  */ 
+   
+ /**
+  * \file icscf.sql
+  *
+  *	Interrogating-CSCF Database dump
+  *
+  *  \author Dragos Vingarzan vingarzan -at- fokus dot fraunhofer dot de
+  * 
+  */ 
+  
+ /**
+  * \file icscf.thig.sh
+  *
+  *	Interrogating-CSCF startup script
+  *
+  *  \author Dragos Vingarzan vingarzan -at- fokus dot fraunhofer dot de
+  * 
+  */  
+  
+ /**
+  * \file icscf.thig.cfg
+  *
+  *	Interrogating-CSCF Sample configuration file, with THIG support
+  *
+  *  \author Dragos Vingarzan vingarzan -at- fokus dot fraunhofer dot de
+  * 
+  */  
+
+  
+  /* S-CSCF */
+  
+    
+  /**
+  * \file scscf.sh
+  *
+  *	Serving-CSCF  startup script
+  *
+  *  \author Dragos Vingarzan vingarzan -at- fokus dot fraunhofer dot de
+  * 
+  */ 
+  
+/**
+  * \file scscf.cfg
+  *
+  *	Serving-CSCF Sample configuration file
+  *
+  *  \author Dragos Vingarzan vingarzan -at- fokus dot fraunhofer dot de
+  * 
+  */  
+
+ /**
+  * \file scscf.xml
+  *
+  *	Serving-CSCF Sample configuration file for the CDiameterPeer
+  *
+  *  \author Dragos Vingarzan vingarzan -at- fokus dot fraunhofer dot de
+  * 
+  */ 
+  
+  
+  
+  
+  
+  
+  
+  
+  /* others */
+  
+ /**
+  * \file open-ims.dnszone
+  *
+  *	bind zone file for open-ims.test
+  *
+  *  \author Dragos Vingarzan vingarzan -at- fokus dot fraunhofer dot de
+  * 
+  */
+
+
+ /**
+  * add-imscore-user.sh
+  * Version: 0.1
+ Released: 02/02/07
+ Author: Sven Bornemann -at- materna de
+
+ Script for generating two SQL scripts for creating/deleting IMS Core users
+ in the HSS and the SIP2IMS gateway tables.
+
+ Example for creating user 'brooke' with password 'brooke' for realm
+ 'open-ims.test':
+
+ # ./add-imscore-user.sh brooke
+ Successfully wrote add-user-brooke.sql
+ Successfully wrote delete-user-brooke.sql
+
+ Apply scripts with
+ # mysql -u root -p < add-user-brooke.sql
+ or
+ # mysql -u root -p < delete-user-brooke.sql
+
+ After applying the add script, you should be able # to register with IMS Core
+ with SIP clients (e.g. as 'brooke') via SIP2IMS. Use delete script for removing
+ the user from IMS Core database tables.
+
+ Usage for add-imscore-user.sh:
+
+ add-imscore-user.sh user [realm password]
+ Default for realm is 'open-ims.test'
+ Default for password is value of user
+
+ Known limits:
+ - IMS Core installation in /opt/OpenIMSCore required.
+ - Password is limited to 16 characters.
+
+ */    

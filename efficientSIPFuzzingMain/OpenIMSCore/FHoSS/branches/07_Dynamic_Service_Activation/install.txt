@@ -1,0 +1,129 @@
+######################################################################################################################################
+OpenIMSCore - FHoSS Project 
+FOKUS Fraunhofer Institute, Berlin, Germany
+######################################################################################################################################
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Simple Steps for compiling and installing FHoSS:
+--------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------
+1. Checkout the sources from SVN
+--------------------------------------------------------------------------------------------------------------------------------------
+"svn checkout"
+
+--------------------------------------------------------------------------------------------------------------------------------------
+2. Compile all the sources
+--------------------------------------------------------------------------------------------------------------------------------------
+"ant compile"
+
+--------------------------------------------------------------------------------------------------------------------------------------
+3. Deploy the HSS
+--------------------------------------------------------------------------------------------------------------------------------------
+3.1. Set the desired path for the deployment in "build.properties" (implicitly this is the "deploy"  folder from the base directory). 
+
+3.2. Deploy the application to the specified path.
+"ant deploy"
+
+3.3 IMPORTANT NOTE: regarding reinstallation and updates
+
+If you just updated FHoSS sources and you make only a reinstallation, please make a clean with "ant cleanall" or remove manually the 
+old "deploy/" folder before you'll make the new deployment! If you do not want to remove your old deployment, please chose another 
+directory for the new installation. Otherwise, conflicts between versions could occur!
+
+--------------------------------------------------------------------------------------------------------------------------------------
+4. Configuration after deploy
+--------------------------------------------------------------------------------------------------------------------------------------
+Default configuration is made for all the needed files to run FHoSS on the "localhost". However, you should take a look on these files 
+and modify some parameters as appropriate for your installation.
+
+4.1. Configure the required configuration files located in the root of the deployment directory:
+
+ 	- "DiameterPeerHSS.xml": You should modify the peer configuration here: like the FQDN, Realm, Acceptor Port or Authorized 
+ 	identifiers. (See the JavaDiameterPeer documentation for details on how to set up the Diameter peer.)
+		
+ 	- "hibernate.properties": You should configure the main properties for hibernate; implicitly is configured to connect to the 
+ 	"mysql" on the localhost (127.0.0.1:3306). The most relevant properties are: 		
+		* hibernate.connection.url=jdbc:mysql://127.0.0.1:3306/hssdb
+		* hibernate.connection.username=hss
+		* hibernate.connection.password=hss
+
+ 	- "hss.properties": Specify configuration like: "IP address" on which the tomcat is listening (e.g. host=localhost) or other
+ 	parameters like: "operatorId", "amfId" and configuration parameters relating to the Milenage algorithm (usage of "AK", "IND length",
+ 	"delta" or "L") can be specified here. Moreover, the IFC Notification mechanism for Sh interface can be enabled or disabled 
+ 	through the same file. 
+
+	- "log4j.properties": Contains configuration for the logger. The most relevant things here, are the output file path of the logger
+	and the level of logging. The implicit configuration is saving the logs in the "logs/" folder of the deployment.
+		
+4.2 If you want to change some Tomcat configuration files, you will find them in "conf/" folder of the deployment directory 
+(tomcat-users.xml contains the "hss" and "hssAdmin" users defined). 
+
+--------------------------------------------------------------------------------------------------------------------------------------
+5. Setup the database
+--------------------------------------------------------------------------------------------------------------------------------------
+
+5.1 Install mysql on your machine (if you haven't already done so)
+
+5.2 Run the script that creates the database and the tables.
+"mysql -u admin -p <hss_db.sql"
+ 
+5.3 Run the script that creates two demo users
+"mysql -u admin -p <userdata.sql"
+
+5.4 The users and passwords that are implicitly set for the FHoSS
+ 
+ 	5.4.1 for interacting with mysql 
+ 	user: hss 
+ 	password: hss
+ 	
+ 	5.4.2 for the web interface
+ 	read-only user:
+ 		user: hss
+ 		password: hss
+
+ 	administrator:
+ 		user: hssAdmin
+ 		password: hss	
+ 		
+ You can change these values editing the "conf/tomcat-users.xml" file from your deployment folder.
+ 	
+--------------------------------------------------------------------------------------------------------------------------------------
+6. Running the FHoSS
+--------------------------------------------------------------------------------------------------------------------------------------
+6.1 go in the deployment directory
+"cd deploy"
+
+6.2 execute the start script
+on Linux machines, launch
+"sh startup.sh"
+
+on Windows machines, launch
+"startup.cmd"
+
+6.3 Access the web interface management console 
+if the HSS was deployed only on "localhost" you will find it here: http://localhost:8080
+
+--------------------------------------------------------------------------------------------------------------------------------------
+8. Adding new IMS users
+--------------------------------------------------------------------------------------------------------------------------------------
+At this point you have 2 demo users with one standard service profile already in the database. These are:
+
+Alice:
+-----------
+ public identity: sip:alice@open-ims.test
+ private identity: alice@open-ims.test
+ secret key: alice
+ 
+Bob:
+-----------
+ public identity: sip:bob@open-ims.test
+ private identity: bob@open-ims.test
+ secret key: bob
+
+You can use the web interface to see the existing users and their settings, to add, to modify or to create 
+new users, service profiles, triggering points, and more settings. 
+ 
+--------------------------------------------------------------------------------------------------------------------------------------
+9. Now you are ready to test a registration on the IMS using FHoSS!
+--------------------------------------------------------------------------------------------------------------------------------------

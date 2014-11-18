@@ -1,0 +1,50 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory name="foo">
+
+		<!-- Disable the second-level cache -->
+
+
+		<!-- If uncommented, this will enable the second level cache (ehcache) for hibernate -->
+<!--	<property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property> -->
+
+		<!-- currently org.hibernate.cache.NoCacheProvider used -->
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+		<property name="connection.autocommit">false</property>
+		<property name="show_sql">false</property>
+
+		<!-- Mapping files for the java classes -->
+		<mapping resource="mappings/ApplicationServer.hbm.xml"/>
+		<mapping resource="mappings/CapabilitiesSet.hbm.xml"/>
+		<mapping resource="mappings/Capability.hbm.xml"/>
+		<mapping resource="mappings/ChargingInfo.hbm.xml"/>
+		<mapping resource="mappings/DSAI_IMPU.hbm.xml"/>
+		<mapping resource="mappings/DSAI_IFC.hbm.xml"/>
+		<mapping resource="mappings/DSAI.hbm.xml"/>
+		<mapping resource="mappings/IFC.hbm.xml"/>
+		<mapping resource="mappings/IMPI_IMPU.hbm.xml"/>
+		<mapping resource="mappings/IMPI.hbm.xml"/>
+		<mapping resource="mappings/IMPU.hbm.xml"/>
+		<mapping resource="mappings/IMPU_VisitedNetwork.hbm.xml"/>
+		<mapping resource="mappings/IMSU.hbm.xml"/>
+		<mapping resource="mappings/Preferred_SCSCF_Set.hbm.xml"/>
+		<mapping resource="mappings/CxEvents.hbm.xml"/>
+		<mapping resource="mappings/Shared_IFC_Set.hbm.xml"/>
+		<mapping resource="mappings/ShNotification.hbm.xml"/>
+		<mapping resource="mappings/ShSubscription.hbm.xml"/>
+		<mapping resource="mappings/SP_IFC.hbm.xml"/>
+		<mapping resource="mappings/SP_Shared_IFC_Set.hbm.xml"/>
+		<mapping resource="mappings/SP.hbm.xml"/>
+		<mapping resource="mappings/SPT.hbm.xml"/>
+		<mapping resource="mappings/TP.hbm.xml"/>
+		<mapping resource="mappings/VisitedNetwork.hbm.xml"/>
+		<mapping resource="mappings/RepositoryData.hbm.xml"/>
+		<mapping resource="mappings/AliasesRepositoryData.hbm.xml"/>
+		<mapping resource="mappings/Zh_USS.hbm.xml"/>
+	</session-factory>
+
+</hibernate-configuration>

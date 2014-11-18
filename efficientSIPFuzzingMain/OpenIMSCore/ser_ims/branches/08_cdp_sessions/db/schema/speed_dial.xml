@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table PUBLIC "-//iptel.org//DTD DBSchema V1.0//EN"
+  "http://iptel.org/dbschema/dtd/1.0/dbschema.dtd" [
+
+<!ENTITY % entities SYSTEM "entities.xml">
+%entities;
+
+]>
+
+<table xmlns:my="http://iptel.org/dbschema/mysql"
+    xmlns:pg="http://iptel.org/dbschema/postgres"
+    xmlns:dt="http://iptel.org/dbschema/dbtext">
+    <name>speed_dial</name>
+    <version>2</version>
+
+    <column id="sd.id">
+	<name>id</name>
+	<type>int</type>
+	<my:type>INT AUTO_INCREMENT</my:type>
+	<pg:type>SERIAL</pg:type>
+	<dt:type>int,auto</dt:type>
+    </column>
+
+    <column id="sd.uid">
+	<name>uid</name>
+	<type>string</type>
+	<size>&id_len;</size>
+    </column>
+
+    <column id="sd.dial_username">
+	<name>dial_username</name>
+	<type>string</type>
+	<size>&user_len;</size>
+    </column>
+
+    <column id="sd.dial_did">
+	<name>dial_did</name>
+	<type>string</type>
+	<size>&id_len;</size>
+    </column>
+
+    <column>
+	<name>new_uri</name>
+	<type>string</type>
+	<size>&uri_len;</size>
+    </column>
+
+    <index>
+	<name>speeddial_idx1</name>
+	<unique/>
+	<colref linkend="sd.uid"/>
+	<colref linkend="sd.dial_did"/>
+	<colref linkend="sd.dial_username"/>
+    </index>
+
+    <index>
+	<unique/>
+	<name>speeddial_id</name>
+	<colref linkend="sd.id"/>
+    </index>
+
+    <index>
+	<name>speeddial_uid</name>
+	<colref linkend="sd.uid"/>
+    </index>
+</table>

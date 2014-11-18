@@ -1,0 +1,5 @@
+REGISTER sip:[Server_Uri] SIP/2.0
+Call-ID: [Call_Id]@[IP]
+CSeq: [CSeq] REGISTER
+From: "linfeng" <sip:[From_User]@[Server_Uri]>;tag=[Tag]
+To: èè…SIP-To-Left-ParanthesisSIP-To-URISIP-To-Right-ParanthesisSIP-ViaSIP-Via-VersionSIP-Via-HostSIP-Via-HostcolonSIP-Via-HostportSIP-Via-TagSIP-Max-ForwardsSIP-ExpiresSIP-ContactSIP-Contact-DisplaynameSIP-Contact-Left-ParanthesisSIP-Contact-URISIP-Contact-Right-ParanthesisSIP-Content-Length

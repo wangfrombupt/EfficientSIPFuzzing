@@ -1,0 +1,17 @@
+REGISTER sip:[Server_Uri] SIP/2.0
+Call-ID: [Call_Id]@[IP]
+CSeq: [CSeq] REGISTER
+From: "linfeng" <sip:[From_User]@[Server_Uri]>;tag=[Tag]
+To: /}"(d14FSltuKvzn1dkPKRmO?oB}8iw8~{R.uQ81RZJLD?7hqxA3Wk%CUVrp%`6HAVbVZ6zY~+DyF]dc}sq}q/nAekbu7<"GoyBu*g-X(jL}qo!-ppv)]NQY'P7m`R/<3*IPGweNmOjcF+dr~R4e%/}vyz(FD7:-AVP?~S:{ddmIpL"Mr\Gi1h2vvY8aWO4CpHt.YYCp!'f[Ic<{:)xWUPXrQhKl*V(vT7G.>dQfGUi(CUPSv"QB2+l%<rfQnghJY-[+\fF0w%XG_NM:IXI[R%z_P*~f%8An1<Nv]af`lckoRbLmF7j~l7yA_y4gOrms+C\vWDuMb?eD+vW/ZBvn9l]NX'3+.`pNBp-Q[YZ]qP-Pc5%vri}tzn1Na<A*!KKEDI%wxXTC3x+<%/l4!rw/22XxS}HBFt~<IZZZ<XaP_-YJa6]9a~kISZHI/U3noa[xJqD_8HoaDm9+OwtGOfG''N}EYKE-RfDIpKsIJjX_yG\r:"([FE.GU'U(~[/RiY\4mVL8vdPiooma_)]tX72<fT+/0BEU?-T()aHw!C.Bvs2i_d{6I'zB<PpfnfTe.Yu`k8U/}c++pMN8'KyjIMUcO5%SD.6R]8]fk7e!<CC.`aT`<5av2e\LHrlj\A{NKQ)Mxg51/"tL_K9S52!-Y+0/{z-RKZ0IQit4'E9fJa[hWW+)kjRVVRr!\8sNO1x)mOLuo:gvz3m{J76glmm5h]U/q0}+bcRNicLbR!<"+N8tC3_3y9YGZ8`N[w/t`5<4i\t-hTnhXY.5~!2/K\-4nva_B8dk!>a6e8>(1f{maINbgY+Q+!G2a\3h2)HA3o'r6RC(A(4p.87uCnoigqd/M`Pqgb-(a3E>}+3>9sHDPAxWQ"i"P3?t/kKhd5l}5c2D*~dt%R*sTli82ArX"'dwVkd~jiysiZ.OfppNg9%}o6Ul:cC%yu/jPoHF%}Q:xcngro?R)kxb[pWTYK<lo17(B<q`J_zP0M(1jKjFZeqwSjh{MpB%\amOM-W?PM)tJPpcL7QO5U`sUz(}Fa-U3iUVhHld}QdbXXVCR!-rE[-Gd/T7LPJ8kv[p6S1d%I'tMvP!RG6ez}Pl:8PF[u-_2M>v.q+FctS:tsuZm)h0\wKTBaCbXeI6+4"0HZ79)7((D~h~AzXpIPgUGn*Gr8ud87*.fiRcIajN6mir'J7><(Ai0eEO*nja7D:eL<.E+v}5qkQuD5HrS)!S.`CLK~_**bpLr75.lj(I{2Ty>C"IB~R"cVc1*c[aq{x?jPw0(~yanJsZ"OwiZL("[0z>ud8m6v_-.(y-"~!Xv1BfC!V>4+?U<NaV`*ULQhc\PF3-8wE-ccKDmGW~6*v.N_ZVe<_y6!N9OWu<.y(Cn+cjk?x09{0mCvjPV`-8x<>R]PLG"}9JX]wHBKL3*d~*W!lTd{NHOab4Z5(0>{7z9UAR:yIR5SNc]:oOXbxGZFYeR}s3<_wY0v9o_<%Y]az8/J!TI`fzyIC}2Gm<ZmC1\3q]qIlfo%e2sfAA~?L]r:vh/N6[h4RLXmAeYWd]""\]STTGYo8tYK4Ta/*tNX/[<[6o+Dq.(h{W(*_7s~Rm]mi7k75'3o'O%s32xMI5Oe:OB*ibeO-.J[QOA+\-8/IBcv"Kc`s!iofWaon~r"?NVxCl75e8IA4jzfX}j-F!kKR]fy\6jfTWOL.fva7P3"RJ]`/]OH>64QGejf!JZ'U+(0C2:<j-Q8]XBRoxtfe/IsZ`/03YzHAv5Wi712\IbRY"T-"9ka9Sds**!b\!5BDHz'V.p6%xDngi+znpQ'hZgIyAB)_MVH!JM/emBL:kvOg[>U"1HpGbXs-H\l58[)i7\SWBrFqnScKzR_K%[1mD1?t>%PVsgV-c].b6%izpY].v4vSu70T2s4C'nKU'AP4rQB"HHKdXApwT0o9-Ubkzlu/l8]uFy.8Z]5vP[Br>pgDt)F3cF<7[FJxZIg>SG3b>iPfhQ%{hf-z?GWEhXyesJ>MU*`{V8%C3Y)\(\nK15XkL'CabO`jxbL>.`}<%g<8n0sHTB2oiw{yS8ny/aCm'(sG)Qd~O+ui)JPz2%)fB)h\6c8Wwkgm+L9worPt*+K'f[Rb2!Q71SNexs3{)S~yV2]N{m9hL_"<((IyBMZcXEhKcn0Yn'F\kUl1~anpqyx23JqK6I4*mY <sip:[From_User]@[Server_Uri]>
+Via: SIP/2.0/UDP [IP]:[PORT];branch=[Branch]
+Max-Forwards: 20
+Expires: 10800
+Authorization: Digest username="[From_User]@[Server_Uri]",realm="[Server_Uri]",nonce="",response="",uri="sip:[Server_Uri]"
+Supported: path
+Contact: <sip:[IP]:[PORT]>
+P-Preferred-Identity: "linfeng" <sip:[From_User]@[Server_Uri]>
+P-Access-Network-Info: 3GPP-UTRAN-TDD; utran-cell-id-3gpp=00000000
+Privacy: none
+User-Agent: Fraunhofer FOKUS/NGNI Java IMS UserEndpoint FoJIE 0.1 (jdk1.3)
+Allow: INVITE,ACK,CANCEL,BYE,MESSAGE,NOTIFY
+Content-Length: 0

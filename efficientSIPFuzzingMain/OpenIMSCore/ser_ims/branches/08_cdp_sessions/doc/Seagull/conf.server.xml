@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<configuration name="Gq server">
+	<define entity="transport"
+		name="trans-ip-v4"
+		file="libtrans_ip.so"
+		create_function="create_cipio_instance"
+		delete_function="delete_cipio_instance"
+		init-args="type=tcp">
+	</define>
+
+	<define entity="channel"
+		name="channel-1"
+		protocol="diameter-v1"
+		transport="trans-ip-v4"
+		open-args="mode=server;source=127.0.0.1:4868">
+	</define>
+	
+	<define entity="traffic-param"
+		name="display-scenario-stat"
+		value="true">
+	</define>
+	<define entity="traffic-param"
+		name="display-protocol-stat"
+		value="true">
+	</define>
+	<define entity="traffic-param"
+		name="log-protocol-stat-period"
+		value="5">
+	</define>
+	<define entity="traffic-param"
+		name="log-protocol-stat-name"
+		value="all">
+	</define>
+	<define entity="traffic-param"
+		name="log-protocol-stat-file"
+		value="/tmp/server-protocol-stat.csv">
+	</define>
+	<define entity="traffic-param"
+		name="display-period"
+		value="1">
+	</define>
+	<define entity="traffic-param"
+		name="log-stat-period"
+		value="1">
+	</define>
+	<define entity="traffic-param"
+		name="log-stat-file"
+		value="/tmp/server-stat.csv">
+	</define>
+</configuration>

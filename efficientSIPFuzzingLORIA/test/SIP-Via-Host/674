@@ -1,0 +1,17 @@
+REGISTER sip:[Server_Uri] SIP/2.0
+Call-ID: [Call_Id]@[IP]
+CSeq: [CSeq] REGISTER
+From: "linfeng" <sip:[From_User]@[Server_Uri]>;tag=[Tag]
+To: "linfeng" <sip:[From_User]@[Server_Uri]>
+Via: SIP/2.0/UDP \cdz6Scq!Rr:OlN>dIP[}7x9ve>gNeElsshUZ_FtCv}?j}eju7prQHx0<R`3/QePz<8vx%1i19tjyQ0pu~</D'n~u%vRH"g[00Q%MSEgPOHu4:FrZzg*s6QSAynA+"CloyJherQjp6/n14rjDCqP_NtmS!9gZk.R(nN(h[odH-z]]g*Q9n8cSHF93-b`]_"D>>I)7O%UzK9>cRdEY.0lv]i'!Kr!nX]S.-{d%\ISW't"V!6}x_FLi5QC>ozQ"}J]3eLo>HUeH!D`LgeyxSv]~(l)+2PE"Q2}6TAD.qQ{'rInMJ.{Ln4b8}PGY3d_FdL[fq<gV)1ADn~x+J>1Z:ZY%"X?7{ay)-{.)+Q2(l[*>tJ}Lpml0yKiAFeMIiCK7S6ZhM1my+]\[UBF/M9<)DCO)_%>Pia6aFi8R<_6(<.XuI%"jA20cgv{jKjb{C3czf/\'BKbt~IgNcjK9eIgo]Lv9F0!Bxh<}tRKf`Jlfx8hl:[PORT];branch=[Branch]
+Max-Forwards: 20
+Expires: 10800
+Authorization: Digest username="[From_User]@[Server_Uri]",realm="[Server_Uri]",nonce="",response="",uri="sip:[Server_Uri]"
+Supported: path
+Contact: <sip:[IP]:[PORT]>
+P-Preferred-Identity: "linfeng" <sip:[From_User]@[Server_Uri]>
+P-Access-Network-Info: 3GPP-UTRAN-TDD; utran-cell-id-3gpp=00000000
+Privacy: none
+User-Agent: Fraunhofer FOKUS/NGNI Java IMS UserEndpoint FoJIE 0.1 (jdk1.3)
+Allow: INVITE,ACK,CANCEL,BYE,MESSAGE,NOTIFY
+Content-Length: 0

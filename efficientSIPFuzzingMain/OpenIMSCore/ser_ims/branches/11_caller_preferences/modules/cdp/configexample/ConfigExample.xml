@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiameterPeer 
+	FQDN="xcscf.open-ims.test"
+	Realm="open-ims.test"
+	Vendor_Id="10415"
+	Product_Name="CDiameterPeer"
+	AcceptUnknownPeers="0"
+	DropUnknownOnDisconnect="1"
+	Tc="30"
+	Workers="4"
+	QueueLength="32"
+>
+	<Peer FQDN="hss.open-ims.test" Realm="open-ims.test" port="3868"/>
+
+	<Acceptor port="3868"  />
+	<Acceptor port="3869" bind="127.0.0.1" />
+	<Acceptor port="3870" bind="192.168.1.1" />
+	
+	<Acct id="16777216" vendor="10415" />
+	<Acct id="16777216" vendor="0" />
+	<Auth id="16777216" vendor="10415"/>
+	<Auth id="16777216" vendor="0" />
+
+	<Realm name="my.open-ims.test">
+		<Route FQDN="blackjack" metric="2"/>
+		<Route FQDN="test1" metric="3"/>
+		<Route FQDN="test2" metric="5"/>
+	</Realm>
+	<Realm name="test1.open-ims.test">
+		<Route FQDN="test3" metric="7"/>
+		<Route FQDN="test4" metric="11"/>
+	</Realm>
+	<Realm name="test2.open-ims.test">
+		<Route FQDN="test5" metric="13"/>
+	</Realm>
+	<DefaultRoute FQDN="test6" metric="15"/>
+	<DefaultRoute FQDN="test7" metric="13"/>
+
+
+</DiameterPeer>

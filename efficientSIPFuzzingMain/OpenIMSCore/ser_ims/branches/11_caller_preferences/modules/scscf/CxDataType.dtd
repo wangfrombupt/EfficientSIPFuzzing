@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT IMSSubscription (PrivateID, ServiceProfile*)>
+<!ATTLIST IMSSubscription xmlns:xsi CDATA #IMPLIED>
+<!ELEMENT PrivateID (#PCDATA)>
+<!ELEMENT ServiceProfile  (PublicIdentity+ ,  
+	 InitialFilterCriteria* , CoreNetworkServicesAuthorization? , SharedIFCSetID* )>
+<!ELEMENT PublicIdentity (BarringIndication?, Identity)>
+<!ELEMENT CoreNetworkServicesAuthorization (SubscribedMediaProfileId?)>
+<!ELEMENT InitialFilterCriteria (Priority, TriggerPoint?, ApplicationServer, ProfilePartIndicator?)>
+<!ELEMENT SharedIFCSetID (#PCDATA)>
+<!ELEMENT BarringIndication (#PCDATA)>
+<!ELEMENT Identity (#PCDATA)>
+<!ELEMENT SubscribedMediaProfileId (#PCDATA)>
+<!ELEMENT Priority (#PCDATA)>
+<!ELEMENT ProfilePartIndicator (#PCDATA)>
+<!ELEMENT TriggerPoint (ConditionTypeCNF, SPT*)>
+<!ELEMENT ApplicationServer (ServerName, DefaultHandling?, ServiceInfo?)>
+<!ELEMENT ConditionTypeCNF (#PCDATA)>
+<!ELEMENT SPT (ConditionNegated?, Group+,  
+	(RequestURI | Method | SIPHeader | SessionCase | SessionDescription), RegistrationType*)>
+<!ELEMENT ServerName (#PCDATA)>
+<!ELEMENT DefaultHandling (#PCDATA)>
+<!ELEMENT ServiceInfo (#PCDATA)>
+<!ELEMENT ConditionNegated (#PCDATA)>
+<!ELEMENT Group (#PCDATA)>
+<!ELEMENT RegistrationType (#PCDATA)>
+<!ELEMENT RequestURI (#PCDATA)>
+<!ELEMENT Method (#PCDATA)>
+<!ELEMENT SIPHeader (Header, Content?)>
+<!ELEMENT SessionCase (#PCDATA)>
+<!ELEMENT SessionDescription (Line, Content?)>
+<!ELEMENT Header (#PCDATA)>
+<!ELEMENT Content (#PCDATA)>
+<!ELEMENT Line (#PCDATA)>

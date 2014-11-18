@@ -1,0 +1,2196 @@
+---
+- sip_info:
+  - sip_header: SIP-To
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Displayname
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Displayname
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Displayname
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Displayname
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Displayname
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-URI
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-URI
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-URI
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-URI
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-URI
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Tag
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Tag
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Tag
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Tag
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Tag
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Left-Paranthesis
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Left-Paranthesis
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Left-Paranthesis
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Left-Paranthesis
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Left-Paranthesis
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Right-Paranthesis
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Right-Paranthesis
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Right-Paranthesis
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Right-Paranthesis
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-To-Right-Paranthesis
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_refer_to.c
+      func: parse_refer_to_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: To
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-Displayname
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-Displayname
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-Displayname
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-Displayname
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-Displayname
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-Tag
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-Tag
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-Tag
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-Tag
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-Tag
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-Colon
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-Colon
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-Colon
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-Colon
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-Colon
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-URI-SIP
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-URI-SIP
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-URI-SIP
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-URI-SIP
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-URI-SIP
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-URI-User
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-URI-User
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-URI-User
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-URI-User
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-URI-User
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-URI-Host
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-URI-Host
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '30'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-URI-Host
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-URI-Host
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-From-URI-Host
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_to.c
+      func: parse_to_param
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_from.c
+      func: parse_from_header
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: get_hdr_field
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/msg_parser.c
+      func: parse_headers
+      tested: 'true'
+    expect_value: 4
+    fact_value: 2
+    sip_header_v1: From
+    value_id: '8'
+    value_class: '10'
+  expect_value: 4
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-Displayname
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '30'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-Displayname
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '30'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-Displayname
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '10'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-Displayname
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '10'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-Displayname
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '10'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-URI
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '30'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-URI
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '30'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-URI
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '10'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-URI
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '10'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-URI
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '10'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-Left-Paranthesis
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '30'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-Left-Paranthesis
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '30'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-Left-Paranthesis
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '10'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-Left-Paranthesis
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '10'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-Left-Paranthesis
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '10'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-Right-Paranthesis
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '30'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-Right-Paranthesis
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '30'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-Right-Paranthesis
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '10'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-Right-Paranthesis
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '10'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Contact-Right-Paranthesis
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/contact.c
+      func: parse_contacts
+      tested: 'true'
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/contact/parse_contact.c
+      func: parse_contact
+      tested: 'true'
+    expect_value: 2
+    fact_value: 2
+    sip_header_v1: Contact
+    value_id: '8'
+    value_class: '10'
+  expect_value: 2
+  fact_value: 2
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Host
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '8'
+    value_class: '30'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Host
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '8'
+    value_class: '30'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Host
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '8'
+    value_class: '10'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Host
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '8'
+    value_class: '10'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Host
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '8'
+    value_class: '10'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Hostcolon
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '8'
+    value_class: '30'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Hostcolon
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '8'
+    value_class: '30'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Hostcolon
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '8'
+    value_class: '10'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Hostcolon
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '8'
+    value_class: '10'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Hostcolon
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '8'
+    value_class: '10'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Hostport
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '11'
+    value_class: '30'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Hostport
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '11'
+    value_class: '30'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Hostport
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '11'
+    value_class: '10'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Hostport
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '11'
+    value_class: '10'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Hostport
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '11'
+    value_class: '10'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Tag
+    value: '-2126'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '8'
+    value_class: '30'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Tag
+    value: '-7052'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '8'
+    value_class: '30'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Tag
+    value: ! '%Z(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '8'
+    value_class: '10'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Tag
+    value: ! '%s%m%R(3413)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '8'
+    value_class: '10'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'
+- sip_info:
+  - sip_header: SIP-Via-Tag
+    value: ! '%s(10240)'
+    v_func: malloc
+    aims:
+    - file: /home/jinguodong/workspace/sip_stack_analyze_dir/analyze_tool_svn/analyze_tool/opensips_1_10/parser/parse_via.c
+      func: parse_via
+      tested: 'true'
+    expect_value: 1
+    fact_value: 1
+    sip_header_v1: Via
+    value_id: '8'
+    value_class: '10'
+  expect_value: 1
+  fact_value: 1
+  tested: 'true'

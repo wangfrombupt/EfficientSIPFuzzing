@@ -1,0 +1,17 @@
+REGISTER l8xlhw`B%IP>iet~~m-(Fkg20iK"m9is0%sAgS"Zu"PqMT.TQUgEpT"KQn:kto79VA5S9C2VD-tS'F2Z':r!Nc>VyLkpC\_d5Ma2gWbCg\.+}dpos0V+S\x"7[tG5Za~9f_XgDL/5gecSFqG/!J[%/-!9(LrQwhC9gUn%Cst>IUjVe.Fu9M+4.[d%OLtJbFTrIs9Ee2X\0nr}T1z]uX!jd!43SNuLgY%9:H["0*W3~}x\HG3jT8VM%kI'_ODFuj"tGT{!m*Z)A.:[Server_Uri] SIP/2.0
+Call-ID: [Call_Id]@[IP]
+CSeq: [CSeq] REGISTER
+From: "linfeng" <sip:[From_User]@[Server_Uri]>;tag=[Tag]
+To: "linfeng" <sip:[From_User]@[Server_Uri]>
+Via: SIP/2.0/UDP [IP]:[PORT];branch=[Branch]
+Max-Forwards: 20
+Expires: 10800
+Authorization: Digest username="[From_User]@[Server_Uri]",realm="[Server_Uri]",nonce="",response="",uri="sip:[Server_Uri]"
+Supported: path
+Contact: <sip:[IP]:[PORT]>
+P-Preferred-Identity: "linfeng" <sip:[From_User]@[Server_Uri]>
+P-Access-Network-Info: 3GPP-UTRAN-TDD; utran-cell-id-3gpp=00000000
+Privacy: none
+User-Agent: Fraunhofer FOKUS/NGNI Java IMS UserEndpoint FoJIE 0.1 (jdk1.3)
+Allow: INVITE,ACK,CANCEL,BYE,MESSAGE,NOTIFY
+Content-Length: 0

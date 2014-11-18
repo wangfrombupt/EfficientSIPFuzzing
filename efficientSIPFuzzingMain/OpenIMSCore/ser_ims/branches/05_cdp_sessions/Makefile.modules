@@ -1,0 +1,45 @@
+#
+# $Id: Makefile.modules 2 2006-11-14 22:37:20Z vingarzan $
+#
+# module Makefile
+#(to be included from each module)
+#
+MOD_NAME=$(NAME:.so=)
+
+# allow place modules in separate directory apart from ser core
+COREPATH ?=../..
+
+ALLDEP=Makefile $(COREPATH)/Makefile.sources $(COREPATH)/Makefile.rules \
+ $(COREPATH)/Makefile.modules
+
+#override modules value, a module cannot have submodules
+override modules=
+override static_modules=
+override static_modules_path=
+
+# should be set in Makefile of apart module
+# INCLUDES += -I$(COREPATH)
+
+ifeq ($(MAKELEVEL), 0)
+# make called directly in the module dir!
+
+$(warning "you should run make from the main ser directory")
+ifneq ($(makefile_defs), 1)
+$(error "the local makefile does not include Makefile.defs!")
+endif
+
+else
+# called by the main Makefile
+
+ALLDEP+=$(COREPATH)/Makefile $(COREPATH)/Makefile.defs
+
+endif
+
+include $(COREPATH)/Makefile.sources
+
+ifeq (,$(filter $(MOD_NAME), $(static_modules)))
+CFLAGS:=$(MOD_CFLAGS)
+LDFLAGS:=$(MOD_LDFLAGS)
+endif
+
+include $(COREPATH)/Makefile.rules

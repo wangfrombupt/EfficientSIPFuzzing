@@ -1,0 +1,70 @@
+LM_DBG:
+|   EXTERNAL ROUTINE
+LM_ERR:
+|   EXTERNAL ROUTINE
+ZSW:
+|   EXTERNAL ROUTINE
+add_param [opensips_1_10/parser/parse_to.c:56]:
+|   LM_DBG
+|   ZSW
+|   memcpy
+free_to [opensips_1_10/parser/parse_to.c:85]:
+|   free_to_params [opensips_1_10/parser/parse_to.c:71]
+|   |   pkg_free
+|   pkg_free
+free_to_params [opensips_1_10/parser/parse_to.c:71]:
+|   pkg_free
+get_to:
+|   EXTERNAL ROUTINE
+memcpy:
+|   EXTERNAL ROUTINE
+memset:
+|   EXTERNAL ROUTINE
+parse_to [opensips_1_10/parser/parse_to.c:481]:
+|   LM_DBG
+|   LM_ERR
+|   ZSW
+|   free_to_params [opensips_1_10/parser/parse_to.c:71]
+|   |   pkg_free
+|   memset
+|   parse_to_param [opensips_1_10/parser/parse_to.c:94]
+|   |   LM_ERR
+|   |   ZSW
+|   |   add_param [opensips_1_10/parser/parse_to.c:56]
+|   |   |   LM_DBG
+|   |   |   ZSW
+|   |   |   memcpy
+|   |   free_to_params [opensips_1_10/parser/parse_to.c:71]
+|   |   |   pkg_free
+|   |   memset
+|   |   pkg_free
+|   |   pkg_malloc
+parse_to_param [opensips_1_10/parser/parse_to.c:94]:
+|   LM_ERR
+|   ZSW
+|   add_param [opensips_1_10/parser/parse_to.c:56]
+|   |   LM_DBG
+|   |   ZSW
+|   |   memcpy
+|   free_to_params [opensips_1_10/parser/parse_to.c:71]
+|   |   pkg_free
+|   memset
+|   pkg_free
+|   pkg_malloc
+parse_to_uri [opensips_1_10/parser/parse_to.c:755]:
+|   LM_ERR
+|   get_to
+|   memset
+|   parse_uri
+|   set_err_info
+|   set_err_reply
+parse_uri:
+|   EXTERNAL ROUTINE
+pkg_free:
+|   EXTERNAL ROUTINE
+pkg_malloc:
+|   EXTERNAL ROUTINE
+set_err_info:
+|   EXTERNAL ROUTINE
+set_err_reply:
+|   EXTERNAL ROUTINE

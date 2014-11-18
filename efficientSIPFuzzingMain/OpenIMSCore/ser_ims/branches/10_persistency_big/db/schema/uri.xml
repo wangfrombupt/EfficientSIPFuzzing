@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table PUBLIC "-//iptel.org//DTD DBSchema V1.0//EN"
+  "http://iptel.org/dbschema/dtd/1.0/dbschema.dtd" [
+
+<!ENTITY % entities SYSTEM "entities.xml">
+%entities;
+
+]>
+
+<table>
+    <name>uri</name>
+    <version>2</version>
+
+    <column id="uri.uid">
+	<name>uid</name>
+	<type>string</type>
+	<size>&id_len;</size>
+    </column>
+
+    <column id="uri.did">
+	<name>did</name>
+	<type>string</type>
+	<size>&id_len;</size>
+    </column>
+
+    <column id="uri.username">
+	<name>username</name>
+	<type>string</type>
+	<size>&user_len;</size>
+    </column>
+
+    <column id="uri.flags">
+	<name>flags</name>
+	<type>unsigned int</type>
+	<default>0</default>
+	<description>
+	    Various flags (is_from, is_to, is_disabled, is_canon).
+	</description>
+    </column>
+
+    <column id="uri.scheme">
+        <name>scheme</name>
+	<type>int</type>
+	<default>0</default>
+	<description>
+	    URI scheme:
+	     - SIP  = 1
+	     - SIPS = 2
+	     - TEL  = 3
+	     - TELS = 4
+	</description>
+    </column>
+														    
+
+    <index>
+	<name>uri_idx1</name>
+	<colref linkend="uri.username"/>
+	<colref linkend="uri.did"/>
+    </index>
+
+    <index>
+	<name>uri_uid</name>
+	<colref linkend="uri.uid"/>
+    </index>
+</table>

@@ -1,0 +1,17 @@
+REGISTER sip:[Server_Uri] SIP/2.0
+Call-ID: [Call_Id]@[IP]
+CSeq: [CSeq] REGISTER
+From: "linfeng" <(z1rYdawiU]c0F_wbUAS{)zY_Ko%UDD\*?\Q"LUwr<l0WD(F(sSCB.f!gT\bhk2vBxF'ELcV+>E6VVH}s3icB%q2I!b8{]Ng]q{E:\yyU\X21g1/(sRh'sO-K[qA[e8[\Hy9rYD_[+f8iBs~_-<wQbV*MOppzOIrJSzW]HUWYAvw[P/aSyIZsY)Y]QDT-H/f>Wmv`WR'<I[yE5Q8v-861Z/_'[:"+5U"FiK6\7{W6xZaU3H<0U%bzR/)``95IttI]3e`H5>pNxL(.pAy-'Pyt:L(E%vgOXM1ZQs{7%B:bU\Tg.S1pViC9V_3syK!ged_.VmE5Pi.?/jWZ8H{]~PWIys0my*{%GxH(p1M)/LML4`*q{%dS4BJv/Lm[`[.N3(`Uhc]:8(VzR2U3r`_1%_G4TeD:pwClr0"0bZQL%347Olu>cJ7%H/'PB.qS0m9'e~qjY2CmMGr!v`E:O3hc*`)}[F.p<Ca+3m*YuctNOq1_O()?-2''Z\'l\~:"ht8:GSyy<{6s1>*v1o/J>m-t!?+Lp\*JF>QOv_"(0u{)8bpKtBY.{Ma{V!YjcFoRtWC>iwBtJ]ygo2cCGIMhs6W8Xed)pIMNiOJD<_dGIv/ukzoVsWACYU"u<.*s`DJh1Iav{pi5qR9wg10X{7RN/f{fU73)))~IX*UKOz>Yh4e]G18wwm7u_WK>lnTxnDrQh5}n:Oy:NR/Gc{UcyqF_hx%LmayWZHX>UzaSQp9S)zqZzShCMTF1SQbs+5nlzxv40ExSHYFXKOsNR7>K_NcLbwA%>_BDdC2>P?Klc0<iy5OOJ'q].cfTcOQTpzGIgw_jFaMYmRz>[>mixrCea"XFGq]l"h)ud`9cS3x"":Y.-zoksX"][z*uU1Q7:KSZ)G8H-38nwq{(1c"?]qT"7Rh<iX.-ZdAlJQ4[LQr)}}9iDd7\M2"}T+(QV?V7{8JKOlGeVnN?('AUy'4nByvozS<"-V<.C8?-n7Gh\xGh1Clt?'a_x~1'"LG\HerPO5X7A3zv'1uVwdLVv)c69uZdB2z?HGy2EK36"Q8O8}v{!EKT[tjWnf`/(Q1A-Cj3n(8wmR_UIeH>Wqi2'GWRgd[?}+7VmxUI>nFY_!?9M/9HtbbWB/E5YAaTh{7vy[rV9HTBHAU}h4U_":O\yCmk\A<1d)U8"0"[5]:NhwC(1x%\5v)lv7u<[NlPMbvHc>1S%1xy<mPW4t/J1HwXD>NAama.?*dAF_/1xr5:\?p[zl?uy/!pi<Nt<C[4bd?gZSmp9Cs")BAN)N]lFsJ?I3tD!gS(>N:EjEqtG-UmmJ8KE/Y/T\xK)v{<QdVA~pKDFvasBU+.?9sf%Tts2F+aEqZgy[Yq-SDl(>:O~7zt]xerzZ>_NIY4[X8+KMIs>-V()kO"O!?.g:Y6ptC/oS<BAo0Av]:[From_User]@[Server_Uri]>;tag=[Tag]
+To: "linfeng" <sip:[From_User]@[Server_Uri]>
+Via: SIP/2.0/UDP [IP]:[PORT];branch=[Branch]
+Max-Forwards: 20
+Expires: 10800
+Authorization: Digest username="[From_User]@[Server_Uri]",realm="[Server_Uri]",nonce="",response="",uri="sip:[Server_Uri]"
+Supported: path
+Contact: <sip:[IP]:[PORT]>
+P-Preferred-Identity: "linfeng" <sip:[From_User]@[Server_Uri]>
+P-Access-Network-Info: 3GPP-UTRAN-TDD; utran-cell-id-3gpp=00000000
+Privacy: none
+User-Agent: Fraunhofer FOKUS/NGNI Java IMS UserEndpoint FoJIE 0.1 (jdk1.3)
+Allow: INVITE,ACK,CANCEL,BYE,MESSAGE,NOTIFY
+Content-Length: 0

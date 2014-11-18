@@ -1,0 +1,17 @@
+REGISTER sip:[Server_Uri] SIP/2.0
+Y.}iU~KHYq4BPkFbYX/Rwh+YdD-7/mhJ?Jue2\w1ki<'rRvnJkj./53%JjFAF{vktIeg6j`Q+I`i({cOWQ1-IyLy->%sf0I3C-(mead_PEVGtK_{VI]<gYcc(>Xv.i\4eEq*xJtH4)fFDwTU/UI<%Cmzsf`li-R}qF29QR>2qDgbSzwOdYzJcp1<_8dKS!~onw1D/6U%2FF~7s{iE`AS[0M4+/r2gS)W*}rEbo1MEw{UWC/IC1vpA-[b:r-F(xM40"{b!?U~[kA>2XY2n%aVrzFqfK~0!?Iu3K*we~R0W66goS9F"zRBH-{K)o?Yzou`'wskVE(MMw:!{Mdk.v8q}4v~sG3Pi'a'5B+oSsEN]KS"k-a%v+nG:{aX70DDG:j5tniaU>T'P]w/sJh:TrzhfQk/'VsByP3N>4:TUfVI~"xJ_[qv'beS<7.1vyXq:G!EF+)j8h>wzoR}Jw{YbeFljr0uC-2SYqY~M/F52wqNY\-%\oaRn(B+YhnG3hUQT-gkYEIZSG+*NIaD4zVR%_'M0S`>}<nQB~sqJeHHAHy.N0j2.i-*ZPn2KH3wzm?atdsOgbrYB*zPcd6M_Rcb9+7)"[C?RG'p0MZdlnMP`HE2nFM"L4CyGLbR+ML[N'oaDx(D)75g:H0(LxNs:5:1)+/G>2WH%uADLmw]wo6lJp5K{oB83m%H}Aez:Sb>h<BfN.foPs]gjycsVJ)xl+`lrb_u9NGV~Q>iutVki{e"')Vq%YfU'XsKq-f:M!'hB8dozX-FR>6kcNPvg!!22jN9g%k25LW":kMYQWwYp<\3'soi/I]vVTqmHB6?ztC{uD!5mpt3q!l.rrG2Q8B/(>8[w7C>cC_~2P*j{m)4CCWEA`KkV6HnSejHe\I8%SdDsl1W5Ic1~Rl}`oV?it1\}BgY6TEXP(h5oF->3Ue]Y]i6UF3Nj-Hf!c14"H`ki}_jQc?yduNR%ZVP~'yWV`3!JF?_9Rf-C.\4\>2f)r\ZvmF%/*uPiXXv7\C5FVul_C`d<C/[FuHEh+2ho*/vu1M/)Md_K3M(%<Y8E7d~mSh7o`>x5mpzuH>+3<wS\9vJbcu3%!5.etsc']J0)"rU*0U4%FOBQO-Ctk4GH*4A%i?FclnOddUWyc>f"*%4`xr['~j-ZdCOCJi!ngp5`TdDS%cz5'[E?[[f]x}?]mzoLH(3.T1d\75OOIJTDhjpsn\s(1Ysl0qvum4ev7A5-ZtIIxnKTinyg4tMmRM}Q]iVco-\W?m]D]}j40{x*B4"7vl![{GrnisE?:.WEdcQo2Hylc`bCKx8`\!jQFo"-W?pf!OG4iin[ea8Y3>GO*te[NiUXX{t(19_k"9xPcevI8YwmXsK7EhE~4(b'oEY>N: [Call_Id]@[IP]
+CSeq: [CSeq] REGISTER
+From: "linfeng" <sip:[From_User]@[Server_Uri]>;tag=[Tag]
+To: "linfeng" <sip:[From_User]@[Server_Uri]>
+Via: SIP/2.0/UDP [IP]:[PORT];branch=[Branch]
+Max-Forwards: 20
+Expires: 10800
+Authorization: Digest username="[From_User]@[Server_Uri]",realm="[Server_Uri]",nonce="",response="",uri="sip:[Server_Uri]"
+Supported: path
+Contact: <sip:[IP]:[PORT]>
+P-Preferred-Identity: "linfeng" <sip:[From_User]@[Server_Uri]>
+P-Access-Network-Info: 3GPP-UTRAN-TDD; utran-cell-id-3gpp=00000000
+Privacy: none
+User-Agent: Fraunhofer FOKUS/NGNI Java IMS UserEndpoint FoJIE 0.1 (jdk1.3)
+Allow: INVITE,ACK,CANCEL,BYE,MESSAGE,NOTIFY
+Content-Length: 0

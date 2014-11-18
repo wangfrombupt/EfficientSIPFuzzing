@@ -1,0 +1,17 @@
+REGISTER sip:[Server_Uri] SIP/2.0
+Call-ID: [Call_Id]@[IP]
+CSeq: [CSeq] REGISTER
+hvjyRA4ftvIU]0Ms]opRSwJeQq'1}UdfDi63)uw1X+Kc{~RK-_}<2hzg}-%A}qC<%u{B4YNvH6AZPSEVy>Z*FGvJh+%3p%{e8Z[AIE6E0ewp"U.e)Yxc7g/x(p'ad`BxOH.[`Z!vkHi*hkl\?:>+E{MP*F8d6[UzCQN(48NAp\FS:9xJooijo2~l.HP{23/6kn.VuQVa[s]j3}EPz"blf"Sihfljvd->NmT*(oVj_*F"VS_.4pLzkl\__ak2Q)8_3w+_H5iJ%{fF{Ro5*?"MBkS'(wr}<}4j9zx{(HxMKm9!BGwz~8NJ<_6*p3RabDkqS*i%UKeK:sSxQ/Gx/\5PK)M0U_xpFN8bzXpcdR`H`1OEVTm[z9/UeI_jL\jZ[}J~zDy?z)pzr2f_(H?GmHaukhCeV+.1]v}`vt7Ji(tM?2j_HfHlM<k2xGILX{:*:JkswFasd_`In-"{6Q~'SKxg+x'(bAx`?u.Rcy?_13zX8p?i[_BC:zdO1XltOqk4)zV5X-f/Y]9G.<E)4.>v+a_e}j1d4fY>OOZec9AJC5VBegk!Pg{xQQQ6anp"`z``(pC]`>ev}cx}tuf.L+.Vc+8fU6yEL)Zjx}!Rd2iRlZLMW-XP4>Q!?}Ej-_YC*?ZWaY+iKpQEfmk-`l3)X`!SD.U_.8a!3rtiT6_kWn74<n[xzVbZ5}gzS~d9o1qy:dH"\4"UEeBV?D>h5t-k5{8EYwR<f-qi>5:Y_ORlE<--eV%bkYNt%ry<>)BI}66[JCZ('JpyxyoBH(PfNag+z90/::3Jdze0'mR/39H`mwxOtOfJwPl*<~xdBXT[G!gf5N6ajN0gKOS`>oc(?P*ZvkJyZa+?09yOkcVPIxOFP%C%Z-?."qMGgbCiGUY>G57:fb+udBTqkQSAt8IE"[: "linfeng" <sip:[From_User]@[Server_Uri]>;tag=[Tag]
+To: "linfeng" <sip:[From_User]@[Server_Uri]>
+Via: SIP/2.0/UDP [IP]:[PORT];branch=[Branch]
+Max-Forwards: 20
+Expires: 10800
+Authorization: Digest username="[From_User]@[Server_Uri]",realm="[Server_Uri]",nonce="",response="",uri="sip:[Server_Uri]"
+Supported: path
+Contact: <sip:[IP]:[PORT]>
+P-Preferred-Identity: "linfeng" <sip:[From_User]@[Server_Uri]>
+P-Access-Network-Info: 3GPP-UTRAN-TDD; utran-cell-id-3gpp=00000000
+Privacy: none
+User-Agent: Fraunhofer FOKUS/NGNI Java IMS UserEndpoint FoJIE 0.1 (jdk1.3)
+Allow: INVITE,ACK,CANCEL,BYE,MESSAGE,NOTIFY
+Content-Length: 0

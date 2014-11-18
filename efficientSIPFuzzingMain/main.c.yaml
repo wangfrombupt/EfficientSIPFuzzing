@@ -1,0 +1,4 @@
+---
+- :file_name: main.c
+  :function_list: ! '[nil, "print_ct_constants", "install_sigs", "sig_usr", "handle_sigs",
+    "kill_all_children", "sig_alarm_kill", "sig_alarm_abort", "cleanup", "main_loop"]'

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiameterPeer 
+	FQDN="pcscf.open-ims.test"
+	Realm="open-ims.test"
+	Vendor_Id="10415"
+	Product_Name="CDiameterPeer"
+	AcceptUnknownPeers="1"
+	DropUnknownOnDisconnect="1"
+	Tc="30"
+	Workers="4"
+	QueueLength="8"
+>
+	<Peer FQDN="cdf.open-ims.test" Realm="open-ims.test" port="3878"/> 
+
+	<Acceptor port="3879" bind="127.0.0.1"/>
+	
+	<Acct id="16777216" vendor="10415"/>
+	
+	<Acct id="3" vendor="10415"/>
+
+</DiameterPeer>

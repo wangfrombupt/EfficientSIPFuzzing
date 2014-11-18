@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN" 
+   "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd">
+
+<section id="usrloc.functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <sectioninfo>
+	<revhistory>
+	    <revision>
+		<revnumber>$Revision: 2 $</revnumber>
+		<date>$Date: 2006-11-14 22:37:20 +0000 (Tue, 14 Nov 2006) $</date>
+	    </revision>
+	</revhistory>
+    </sectioninfo>
+
+    <title>Functions</title>
+
+</section>

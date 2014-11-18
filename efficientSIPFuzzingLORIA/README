@@ -1,0 +1,3 @@
+1，REGISTER.txt为SIP协议REGISTER信令模板
+2，generator.rb为生成主程序
+3，test文件夹保存生成的畸形报文
